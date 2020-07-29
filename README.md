@@ -1,21 +1,13 @@
 # Slreamer
 
-**TODO: Add description**
+Slack + Streamer = Slreamer
 
-## Installation
+Slackのスレッドに召喚するとそれ以降のコメントをWebsocketで流すBotです。
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `slreamer` to your list of dependencies in `mix.exs`:
+「コメント太郎召喚」で召喚されます。
+「コメント太郎粉砕」でキックされます。
 
-```elixir
-def deps do
-  [
-    {:slreamer, "~> 0.1.0"}
-  ]
-end
-```
+## 構成
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/slreamer](https://hexdocs.pm/slreamer).
-
+Plugアプリケーションです。
+ベーシックなWebsocketを利用していて、接続クライアント一覧をGenServerで管理しています。
