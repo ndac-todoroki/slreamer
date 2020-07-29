@@ -53,7 +53,7 @@ defmodule Slreamer.Slack.Writer do
     }
   end
 
-  def kicked do
+  def disabled do
     %{
       response_type: :in_channel,
       blocks: [
@@ -62,6 +62,21 @@ defmodule Slreamer.Slack.Writer do
           text: %{
             type: :mrkdwn,
             text: ":money_with_wings:"
+          }
+        }
+      ]
+    }
+  end
+
+  def kicked do
+    %{
+      response_type: :in_channel,
+      blocks: [
+        %{
+          type: :section,
+          text: %{
+            type: :mrkdwn,
+            text: ":dead_mario:"
           }
         }
       ]
