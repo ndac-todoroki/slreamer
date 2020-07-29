@@ -13,7 +13,6 @@ defmodule Slreamer.Slack.WebhooksController do
   plug :match
   plug Plug.Parsers, parsers: [:json], json_decoder: Jason
   plug :dispatch
-  plug Plug.Logger
 
   post "/" do
     react(conn, conn.body_params)
